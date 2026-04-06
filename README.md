@@ -1,16 +1,114 @@
-# React + Vite
+#  ZorvynFinance - Financial Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**ZorvynFinance** is a high performance Financial Intelligence Dashboard built with **React** and **Tailwind CSS**. It moves beyond simple expense tracking by implementing **Agile inspired velocity charts**, **automated budget auditing**, and **multi format data portability**.
 
-Currently, two official plugins are available:
+##  Dashboard Previews
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 1. Main Dashboard Overview
+The central intelligence hub. It aggregates global state from the **Zustand Store** to provide a real-time snapshot of the user's financial position.
 
-## React Compiler
+<img width="1915" height="857" alt="Screenshot 2026-04-06 094426" src="https://github.com/user-attachments/assets/1afc403f-7ca4-4585-bea1-5195605a5c9c" />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Advanced Transactions Ledger
+A robust data management system designed for high-volume financial logs with professional-grade portability.
 
-## Expanding the ESLint configuration
+<img width="1906" height="871" alt="image" src="https://github.com/user-attachments/assets/9e15b681-b1e8-49e4-a72c-307d5d1ebc63" />
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 3. Multi-Account Management
+A liquidity-focused module that tracks assets across fragmented financial silos like Bank, Cash, and Savings.
+
+<img width="1903" height="866" alt="image" src="https://github.com/user-attachments/assets/fbdba3f0-386d-4f05-bb4a-3b2cd96224d4" />
+
+
+### 4. Smart Savings Goals
+A target-oriented planning module that synchronizes the user's total balance with long-term financial objectives.
+
+<img width="1910" height="861" alt="image" src="https://github.com/user-attachments/assets/d8b8aa77-d30f-48a9-8d6a-9be069d52912" />
+
+
+## Core Features
+
+###  Financial Summary and Interactive Charts
+- **Summary KPI Cards:** Real-time calculation of Total Balance, Income, and Expenses with smart INR formatting.
+- **Daily Cash Flow:** A high-fidelity `AreaChart` (via Recharts) visualizing daily liquidity fluctuations.
+- **Categorical Breakdown:** A specialized `PieChart` that groups expenses by category to identify major budget "leaks."
+
+### Transaction Management
+- **Search & Filter Engine:** Instant filtering by description, type (Income/Expense), and categories.
+- **Pagination:** Handles large datasets gracefully with a seamless navigation system and "Empty State" UI.
+
+### Role Based UI (RBAC) Simulation
+- **Admin Role:** Full access to state-mutating actions like "Add Transaction" and "Delete."
+- **Viewer Role:** Read-only interface where data-entry tools are conditionally removed from the DOM to demonstrate front-end security principles.
+
+---
+
+## Advanced Extra Features 
+
+### 1. Monthly Spending Sprint (Velocity Graph)
+A specialized "Burn-up" chart that calculates if your current spending pace is sustainable.
+- **The Logic:** It calculates a daily spending limit ($Total \: Limit \div 30 \times Current \: Day$).
+- **Visual Feedback:** The UI signals **"Over Pacing"** if you exceed the ideal path, acting as a real-time early warning system.
+
+### 2. Multi-Account Management
+Unlike a single balance tracker, this module manages fragmented assets across Bank, Cash, and Savings.
+- **Liquidity Ratio:** Automatically identifies how much of your total net worth is "Liquid" vs. "Banked."
+
+### 3. Smart Savings Goals
+A goal-oriented planning module with real-time mathematical synchronization.
+- **Progress Tracking:** Tracks percentage completion for targets like an "Emergency Fund" or "New Laptop."
+- **Live Sync:** Progress bars react instantly as your total balance fluctuates from new transactions.
+
+### 4. Intelligent Insight Engine
+A rule-based auditing system that performs background analysis on spending behavior:
+- **80% Threshold Warnings:** Triggers a high-priority UI alert when monthly expenses hit 80% of total earnings.
+- **Savings Retention:** Analyzes the ratio of income saved vs. spent to categorize financial health as "Excellent" or "Stable."
+
+### 5. Multi-Format Export Engine (PDF/CSV/JSON)
+A professional data portability tool built into the transaction ledger:
+- **PDF:** High-fidelity, print-ready reports via browser stream.
+- **CSV:** Standard spreadsheet export for Excel and Google Sheets.
+- **JSON:** A direct state-to-schema dump for data migration or API testing.
+
+### 6. Budget Pulse Monitoring
+- **Visual Feedback:** Progress bars for categories feature a **Pulse Animation** and color-shift (Blue to Red) when a limit is breached.
+
+
+## Tech Stack
+
+- **Frontend:** React.js (Vite)
+- **Styling:** Tailwind CSS (Dark mode ready)
+- **State Management:** **Zustand** (Clean, Store based architecture)
+- **Data Visualization:** Recharts
+- **Iconography:** Lucide React
+- **UI Components:** Framer Motion and Tailwind animate
+
+
+## Installation and  Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ameya-123/Finance-Dashboard.git
+
+2. **Navigate into the project directory:**
+   cd finance-dashboard
+
+3. **Install Core Dependencies:**
+   npm install
+
+4. **Start the Development Server:**
+   npm run dev     
+
+## Project Structure
+
+finance-dashboard/
+├── public/              # Static assets (Logos, Icons)
+├── src/
+│   ├── components/      # Modular UI (Dashboard, Transactions, Accounts, Goals)
+│   ├── store/           # Global State (Zustand useFinanceStore.js)
+│   ├── utils/           # Logic (INR formatters, Export PDF/CSV/JSON logic)
+│   ├── App.jsx          # Root Component & Routing
+│   ├── main.jsx         # Entry point
+│   └── index.css        # Global Tailwind Styling
+├── package.json         # Dependencies & Scripts
+└── tailwind.config.js   # UI Theme Configuration
