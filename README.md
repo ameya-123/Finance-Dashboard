@@ -86,18 +86,19 @@ A professional data portability tool built into the transaction ledger:
 
 ## Installation and  Setup
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/ameya-123/Finance-Dashboard.git
+```bash
+# 1. Clone the repository
+git clone [https://github.com/your-username/finance-dashboard.git](https://github.com/your-username/finance-dashboard.git)
 
-2. **Navigate into the project directory:**
-   cd finance-dashboard
+# 2. Navigate into the project directory
+cd finance-dashboard
 
-3. **Install Core Dependencies:**
-   npm install
+# 3. Install Core Dependencies
+# (Required to download React, Tailwind, and Zustand)
+npm install
 
-4. **Start the Development Server:**
-   npm run dev     
+# 4. Start the Development Server
+npm run dev
 
 ## Project Structure
 
