@@ -101,14 +101,5 @@ A professional data portability tool built into the transaction ledger:
 
 ## Project Structure
 
-finance-dashboard/
-├── public/              # Static assets (Logos, Icons)
-├── src/
-│   ├── components/      # Modular UI (Dashboard, Transactions, Accounts, Goals)
-│   ├── store/           # Global State (Zustand useFinanceStore.js)
-│   ├── utils/           # Logic (INR formatters, Export PDF/CSV/JSON logic)
-│   ├── App.jsx          # Root Component & Routing
-│   ├── main.jsx         # Entry point
-│   └── index.css        # Global Tailwind Styling
-├── package.json         # Dependencies & Scripts
-└── tailwind.config.js   # UI Theme Configuration
+<img width="847" height="308" alt="image" src="https://github.com/user-attachments/assets/8c1a5875-b0b7-4d71-91af-486079edc931" />
+
